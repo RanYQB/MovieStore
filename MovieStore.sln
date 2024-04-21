@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.Api", "MovieStore.Api\MovieStore.Api.csproj", "{88EF5ADB-1DFB-4268-9884-A5E80E4C60C4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{33901758-F6EB-418B-9EA9-36A90C19DFA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88EF5ADB-1DFB-4268-9884-A5E80E4C60C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EF5ADB-1DFB-4268-9884-A5E80E4C60C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EF5ADB-1DFB-4268-9884-A5E80E4C60C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EF5ADB-1DFB-4268-9884-A5E80E4C60C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33901758-F6EB-418B-9EA9-36A90C19DFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33901758-F6EB-418B-9EA9-36A90C19DFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33901758-F6EB-418B-9EA9-36A90C19DFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33901758-F6EB-418B-9EA9-36A90C19DFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01FF8FAE-4F7D-4D6D-97D6-106AE8731603}
+	EndGlobalSection
+EndGlobal
