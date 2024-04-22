@@ -5,7 +5,7 @@ services:
     image: ${DOCKER_REGISTRY-}moviestoreapi
     build:
       context: .
-      dockerfile: MovieStore.Api/Dockerfile
+      dockerfile: src/MovieStore.Api/Dockerfile
     ports: 
       - 5400:8080
       - 5401:8081
