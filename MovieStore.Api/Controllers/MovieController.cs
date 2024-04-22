@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieStore.Api.Models;
 using MovieStore.Api.DataAccess;
+using MovieStore.Api.BusinessLogic;
+using MovieStore.ServiceLibrary.Domains;
+using MovieStore.ServiceLibrary.Entities;
 
 namespace MovieStore.Api.Controllers
 {
@@ -9,20 +12,11 @@ namespace MovieStore.Api.Controllers
     [ApiController]
     public class MovieController : ControllerBase
     {
-        public IActionResult AddNewMovie(MovieModel movieModel)
+        public IActionResult AddNewMovie(MovieEntity movieEntity)
         {
-            var businessLogic = new BusinessLogic();
-            businessLogic.SaveMovie(movieModel);
+            var businessLogic = new Movie();
+            businessLogic.SaveMovie(movieEntity);
             return Ok();
-        }
-
-        public class BusinessLogic()
-        {
-            public void SaveMovie(MovieModel movieModel)
-            {
-                var dataAccess = new MovieDataAccess();
-                dataAccess.SaveMovieToDatabase(movieModel);
-            }
         }
 
     }
