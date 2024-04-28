@@ -10,7 +10,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["MovieStore.Api/MovieStore.Api.csproj", "MovieStore.Api/"]
-RUN dotnet restore "./MovieStore.Api/MovieStore.Api.csproj"
+RUN dotnet restore "MovieStore.Api/MovieStore.Api.csproj"
 COPY . .
 WORKDIR "/src/MovieStore.Api"
 RUN dotnet build "./MovieStore.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
