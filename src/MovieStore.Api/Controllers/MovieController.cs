@@ -17,9 +17,5 @@ namespace MovieStore.Api.Controllers
             return Ok();
         }
 
-    }
-
-
-
-   
+    } 
 }
