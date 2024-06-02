@@ -34,6 +34,9 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: docker build .NET Api
+        env: 
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
         run: |
           docker build ./src -t $DOCKER_USER/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }} 
       - name: docker push
