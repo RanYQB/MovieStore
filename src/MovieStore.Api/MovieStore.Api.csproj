@@ -19,4 +19,8 @@
     <ProjectReference Include="..\MovieStore.ServiceLibrary\MovieStore.ServiceLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="..\MovieStore.ServiceLibrary\MovieStore.test.csproj" />
+  </ItemGroup>
+
 </Project>

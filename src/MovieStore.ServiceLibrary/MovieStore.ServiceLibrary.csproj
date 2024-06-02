@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MovieStore.test\MovieStore.test\MovieStore.test.csproj" />
+  </ItemGroup>
+
 </Project>
