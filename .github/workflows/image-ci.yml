@@ -40,6 +40,9 @@ jobs:
         run: |
           docker build ./src -t $DOCKER_USER/$DOCKER_IMAGE:latest 
       - name: docker push
+        env: 
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}  
         run: |
           docker push $DOCKER_USER/$DOCKER_IMAGE:latest
       - name: Run Trivy vulnerability scanner
