@@ -38,10 +38,10 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
         run: |
-          docker build ./src -t $DOCKER_USER/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }} 
+          docker build ./src -t $DOCKER_USER/$DOCKER_IMAGE:latest 
       - name: docker push
         run: |
-          docker push $DOCKER_USER/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }}
+          docker push $DOCKER_USER/$DOCKER_IMAGE:latest
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
