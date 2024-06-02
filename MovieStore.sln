@@ -16,9 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.ServiceLibrary",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{ED679A88-74A4-47F6-A488-8EFC637C9DF5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A953F8F1-76EA-4E94-B961-01CDE28DFC71}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MovieStore.Main", "src\MovieStore.Main\MovieStore.Main.sqlproj", "{B094124C-E35E-4989-9BE2-A8BEAE678FB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.test", "src\MovieStore.test\MovieStore.test\MovieStore.test.csproj", "{E330A558-FA07-4C46-BB89-47D7D90D08CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +44,10 @@ Global
 		{B094124C-E35E-4989-9BE2-A8BEAE678FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B094124C-E35E-4989-9BE2-A8BEAE678FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B094124C-E35E-4989-9BE2-A8BEAE678FB3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E330A558-FA07-4C46-BB89-47D7D90D08CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E330A558-FA07-4C46-BB89-47D7D90D08CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E330A558-FA07-4C46-BB89-47D7D90D08CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E330A558-FA07-4C46-BB89-47D7D90D08CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +56,7 @@ Global
 		{199912F1-882E-4EEB-A2C9-C211017DA632} = {A1722064-A7D6-4913-B33C-C3A63B27E7D8}
 		{85E62C29-B7E0-4875-A2D6-0EF8CD79BCF8} = {A1722064-A7D6-4913-B33C-C3A63B27E7D8}
 		{B094124C-E35E-4989-9BE2-A8BEAE678FB3} = {A1722064-A7D6-4913-B33C-C3A63B27E7D8}
+		{E330A558-FA07-4C46-BB89-47D7D90D08CB} = {A1722064-A7D6-4913-B33C-C3A63B27E7D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01FF8FAE-4F7D-4D6D-97D6-106AE8731603}
