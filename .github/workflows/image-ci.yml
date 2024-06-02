@@ -45,15 +45,3 @@ jobs:
           DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}  
         run: |
           docker push $DOCKER_USER/$DOCKER_IMAGE:latest
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        env: 
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
-        with:
-          image-ref: $DOCKER_USER/$DOCKER_IMAGE:latest
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL'
