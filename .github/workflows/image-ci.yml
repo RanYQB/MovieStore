@@ -16,11 +16,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         env: 
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
         with:
           images: |
-            '$DOCKER_USERNAME/$DOCKER_IMAGE'
+            '$DOCKER_USER/$DOCKER_IMAGE'
           tags: |
             type=raw,value=latest
             type=ref,event=branch
@@ -35,15 +35,14 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: docker build .NET Api
         run: |
-          cd src
-          docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }} .
+          docker build ./src -t $DOCKER_USER/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }} 
       - name: docker push
         run: |
-          docker push $DOCKER_USERNAME/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }}
+          docker push $DOCKER_USER/$DOCKER_IMAGE:${{ steps.meta.outputs.tags }}
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: '$DOCKER_USERNAME/$DOCKER_IMAGE:latest'
+          image-ref: '$DOCKER_USER/$DOCKER_IMAGE:latest'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
